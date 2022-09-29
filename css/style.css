@@ -59,6 +59,21 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 ._container{
     max-width: 1140px;
     margin: 0px auto;
+    box-sizing: content-box;
+}
+
+._ibg{
+    position: relative;
+
+}
+
+._ibg img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
 }
 
 /* ----Header------------------------------------------------ */
@@ -73,7 +88,8 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 
 .header__container {
     display: flex;
-    background-color: red;
+    align-items: center;
+    padding: 18px 21px;
 }
 
 .header__logo {
@@ -84,6 +100,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 }
 
 .header__menu-list {
+    margin: 0px 0px 0px auto;
 }
 
 .menu {
@@ -106,4 +123,43 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
     color: inherit;
     font-family: Roboto;
     font-weight: 400;
+}
+
+/* ----Main-About---------------------------------------------- */
+
+.main-about__container{
+}
+
+.main-about__background{
+    position: absolute;
+    width: 100%;
+    height: 575px;
+    top: 0;
+    left: 0;
+}
+
+.main-about__content{
+    padding: 166px 0px 122px 0px;
+    max-height: 575px;
+    position: relative;
+    z-index: 2;
+    display:flex;
+    flex: 1 1 50%;
+}
+
+.main-about__left-side{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-about__right-side{
+    display: flex;
+    flex-direction: column;
+}
+
+.left-side__title{
+    font-family: Roboto;
+    font-size: 50px;
+    font-weight: 400;
+    margin: 0px 0px 20px 0px;
 }
