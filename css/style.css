@@ -1,0 +1,109 @@
+/* ----Обнуление--------------------------------------------- */
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/* Меняется подсчёт ширины блока для более удобной верстки */
+*,*:before,*:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* Убираются линии обводки в некоторых браузерах */
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+/* Перечисляются html5 тэги и добавляются значение, которое делает их блочными */
+nav,footer,header,aside{display: block;}
+
+/* Уравнивается поведение шрифтов и элементов для разных браузеров, запрещают увеличение шрифта самовольно на IPhone */
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Просим наследовать теги form семейство шрифта */
+input,button,textarea{font-family: inherit;}
+
+/* Убираются некоторые особенности в разных браузерах */
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul,ol,li{list-style: none;}
+img{vertical-align: top;}
+
+/* Обнуляются все заголовки h */
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
+
+/* ----Services---------------------------------------------- */
+
+.wrapper{
+    overflow: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+._container{
+    max-width: 1140px;
+    margin: 0px auto;
+}
+
+/* ----Header------------------------------------------------ */
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.header__container {
+    display: flex;
+    background-color: red;
+}
+
+.header__logo {
+    font-size: 30px;
+    color: inherit;
+    font-family: Roboto;
+    font-weight: 400;
+}
+
+.header__menu-list {
+}
+
+.menu {
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__item {
+    
+}
+
+.menu__item:not(:last-child) {
+    margin: 0px 92px 0px 0px;
+}
+
+.menu__link {
+    font-size: 21px;
+    color: inherit;
+    font-family: Roboto;
+    font-weight: 400;
+}
