@@ -46,6 +46,12 @@ img{vertical-align: top;}
 /* Обнуляются все заголовки h */
 h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 
+/* ---Main-Work--------------------------------------------------------------------- */
+
+.main-work__container{
+    padding: 0px 21px;
+}
+
 /* ---DOG--------------------------------------------------------------------- */
 
 .dog__body{

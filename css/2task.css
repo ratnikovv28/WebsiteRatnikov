@@ -1,0 +1,249 @@
+.picture{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.picture__background img{
+    width: 100%;
+    height: 100%;
+}
+
+.picture__main-body{
+    
+}
+
+.boy{
+    height: 200px;
+}
+
+.main-body__boy{
+    height: 135px;
+    position: absolute;
+    top: 65px;
+    transform: translateX(-70%);
+    visibility: hidden;
+    z-index: 1;
+}
+
+.main-body__boy_turned{
+    height: 135px;
+    position: absolute;
+    top: 65px;
+    transform: translateX(130%);
+    visibility: hidden;
+    z-index: 1;
+}
+
+.main-body__handle{
+    height: 60px;
+    position: absolute;
+    top: 100px;
+    left: 105px;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.main-body__pinwheel{
+    height: 55px;
+    position: absolute;
+    top: 75px;
+    left: 92px;
+    z-index: 3;
+    transform: rotate(0deg);
+    visibility: hidden;
+}
+
+.picture-text{
+    font-size: 13px;    
+    position: absolute;
+    font-weight: 700;
+    font-family: Roboto;
+    opacity: 0;
+}
+
+.main-body__hover-text{
+    top: 180px;
+    left: 12px;
+    color: #D5D2D0;
+}
+
+.main-body__active-text{
+    top: 30px;
+    left: -6px;
+    transform: rotate(-25deg);
+    color: #00FF00;
+}
+
+/* ----------------Keyframes-------------------------------------------- */
+
+@keyframes sepia-effect {
+    0%{
+        filter: sepia(0%);
+    }
+    25%{
+        filter: sepia(20%);
+    }
+    50%{
+        filter: sepia(40%);
+    }
+    75%{
+        filter: sepia(60%);
+    }
+    100%{
+        filter: sepia(80%);
+    }
+}
+
+@keyframes running-boy{
+    0%{
+        transform: translateX(-70%);
+    }
+    100%{
+        transform: translateX(130%);
+        visibility: visible;
+    }
+}
+
+@keyframes boy{
+    0%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+@keyframes turned-boy{
+    0%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+
+@keyframes toys-wholesale-text-visible{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes toys-wholesale-text-hidden{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes funny-toys-text{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes handle-visible {
+    0%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+
+@keyframes pinwheel-spinning {
+    0%{
+        transform: rotate(0deg);
+        visibility: visible;
+    }
+    12.5%{
+        transform: rotate(-45deg);
+    }
+    25%{
+        transform: rotate(-90deg);
+    }
+    37.5%{
+        transform: rotate(-135deg);
+    }
+    50%{
+        transform: rotate(-180deg);
+    }
+    62.5%{
+        transform: rotate(-225deg);
+    }
+    75%{
+        transform: rotate(-270deg);
+    }
+    87.5%{
+        transform: rotate(-315deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+/* ----------------Hover------------------------------------------------ */
+
+.picture:hover .main-body__boy{
+    animation-name: running-boy;
+    animation-duration: 2s; 
+    animation-fill-mode: forwards;
+}
+
+.picture:hover .main-body__hover-text{
+    animation-name: toys-wholesale-text-visible;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/* ----------------Active----------------------------------------------- */
+
+.picture:active{
+    animation-name: sepia-effect;
+    animation-duration: 5s; 
+    animation-fill-mode: forwards;
+}
+
+.picture:active .main-body__boy{
+    animation-name: boy;
+    animation-duration: 0s; 
+    animation-fill-mode: forwards;
+}
+
+.picture:active .main-body__hover-text{
+    animation-name: toys-wholesale-text-hidden;
+    animation-duration: 0s;
+}
+
+.picture:active .main-body__active-text{
+    animation-name: funny-toys-text;
+    animation-duration: 0.5s; 
+    animation-fill-mode: forwards;
+}
+
+.picture:active .main-body__boy_turned{
+    animation-name: turned-boy;
+    animation-duration: 0s; 
+    animation-fill-mode: forwards;
+}
+
+.picture:active .main-body__pinwheel{
+    animation-name: pinwheel-spinning;
+    animation-duration: 5s; 
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.picture:active .main-body__handle{
+    animation-name: handle-visible;
+    animation-duration: 0s; 
+    animation-fill-mode: forwards;
+}
