@@ -1,0 +1,237 @@
+/* ----Обнуление--------------------------------------------- */
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/* Меняется подсчёт ширины блока для более удобной верстки */
+*,*:before,*:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* Убираются линии обводки в некоторых браузерах */
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+/* Перечисляются html5 тэги и добавляются значение, которое делает их блочными */
+nav,footer,header,aside{display: block;}
+
+/* Уравнивается поведение шрифтов и элементов для разных браузеров, запрещают увеличение шрифта самовольно на IPhone */
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    color: #fff;
+    font-family: Roboto;
+}
+
+/* Просим наследовать теги form семейство шрифта */
+input,button,textarea{font-family: inherit;}
+
+/* Убираются некоторые особенности в разных браузерах */
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul,ol,li{list-style: none;}
+img{vertical-align: top;}
+
+/* Обнуляются все заголовки h */
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
+
+/* ---DOG--------------------------------------------------------------------- */
+
+.dog__body{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.tail{
+    width: 33px;
+    height: 33px;
+    margin-top: 38px;
+    margin-left: 42px;
+    border-radius: 50%;
+    box-shadow: 7px 7px 0 0 #8F6346;
+    position: absolute;
+    transform: rotate(-22deg);
+}
+
+.body{
+    width: 64px;
+    height: 34px;
+    border-radius: 32px/17px;
+    background: #8F6346;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+
+.head{
+    width: 48px;
+    height: 26px;
+    border-radius: 25px/13px;
+    background: #A97F56;
+    position: absolute;
+    margin-left: -56px;
+    margin-top: 36px;
+    transform: rotate(-90deg);
+}
+
+.ear{
+    width: 42px;
+    height: 22px;
+    border-radius: 21px/11px;
+    background-image: radial-gradient(farthest-side at 30px 11px,
+    white -30%,
+    #AD8C69 100%);
+    position: absolute;
+    margin-left: -46px;
+    margin-top: 40px;
+    transform: rotate(-90deg);
+}
+
+.muzzle{
+    width: 32px;
+    height: 22px;
+    border-radius: 4px;
+    background-image: radial-gradient(farthest-corner at 120px -17px,
+    white 0%,
+    #AD8C69 100%);
+    position: absolute;
+    margin-left: -90px;
+    margin-top: 37px;
+    transform: rotate(-7deg);
+}
+
+.nose, .eye{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.eye{
+    background: black;
+    margin-left: -70px;
+    margin-top: 31px;
+}
+
+.nose{
+    background: #8F6346;
+    margin-left: -120px;
+    margin-top: 36px;
+}
+
+.left_leg, .right_leg{
+    width: 42px;
+    height: 13px;
+    border-radius: 5px;
+    background-image: radial-gradient(
+            white -400%,
+            #8F6346 100%);
+    position: absolute;
+    margin-top: 95px;
+}
+
+.right_leg{
+    margin-left: 33px;
+    transform: rotate(-100deg);
+}
+
+.left_leg{
+    margin-left: -32px;
+    transform: rotate(-80deg);
+}
+
+.right_paw, .left_paw{
+    width: 24px;
+    height: 9px;
+    border-radius: 13px 13px 0 0;
+    background-image: radial-gradient(farthest-corner at -20px -40px,
+    white 20%,
+    #8F6346 100%);
+    position: absolute;
+    margin-top: 121px;
+}
+
+.right_paw{
+    margin-left: 40px;
+}
+
+.left_paw{
+    margin-left: -42px;
+}
+
+.podium{
+    width: 65px;
+    height: 45px;
+    background: #EF7E27;
+    position: absolute;
+    margin-top: 130px;
+    margin-left: -1px;
+}
+
+.podium_bottom{
+    width: 77px;
+    height: 8px;
+    border-radius: 5px;
+    background: #D87225;
+    position: absolute;
+    margin-top: 175px;
+    margin-left: -1px;
+}
+
+.first_line, .second_line, .third_line{
+    width: 45px;
+    height: 2px;
+    border-radius: 2px;
+    background: #AC5514;
+    position: absolute;
+    margin-left: -1px;
+}
+
+.first_line{
+    margin-top: 139px;
+}
+
+.second_line{
+    margin-top: 147px;
+}
+
+.third_line{
+    margin-top: 155px;
+}
+
+.first_triangle, .second_triangle, .third_triangle {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: absolute;
+    border-bottom: 10px solid #97490D;
+    margin-top: 162px;
+    margin-left: 0;
+}
+
+.first_triangle {
+    margin-left: 0;
+}
+
+.second_triangle {
+    margin-left: -39px;
+}
+
+.third_triangle {
+    margin-left: 37px;
+}

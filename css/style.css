@@ -27,9 +27,8 @@ html,body{
     width: 100%;
     font-size: 100%;
     line-height: 1;
-    font-size: 14px;
     color: #fff;
-    font-weight: 500;
+    font-family: Roboto;
 }
 
 /* Просим наследовать теги form семейство шрифта */
@@ -76,6 +75,21 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
     object-fit: cover;
 }
 
+/* ----General----------------------------------------------- */
+
+.page{
+    flex: 1 1 auto;
+    font-family: Montserrat;
+    color: #212529;
+}
+
+.title{
+    font-weight: 600;
+    font-size: 40px;
+    font-family: Montserrat;
+    color: #212529;
+}
+
 /* ----Header------------------------------------------------ */
 
 .header{
@@ -94,8 +108,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 
 .header__logo {
     font-size: 30px;
-    color: inherit;
-    font-family: Roboto;
     font-weight: 400;
 }
 
@@ -121,19 +133,28 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 .menu__link {
     font-size: 21px;
     color: inherit;
-    font-family: Roboto;
     font-weight: 400;
+    opacity: 50%;
+}
+
+.menu__link_active{
+    opacity: 1;
 }
 
 /* ----Main-About---------------------------------------------- */
 
+.main-about{
+    position: relative;
+}
+
 .main-about__container{
+    padding: 0px 21px;
 }
 
 .main-about__background{
     position: absolute;
     width: 100%;
-    height: 575px;
+    height: 100%;
     top: 0;
     left: 0;
 }
@@ -144,22 +165,323 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
     position: relative;
     z-index: 2;
     display:flex;
-    flex: 1 1 50%;
 }
 
-.main-about__left-side{
+.main-about__part{
     display: flex;
     flex-direction: column;
+    flex: 0 1 50%;
+    color:#fff;
 }
 
-.main-about__right-side{
-    display: flex;
-    flex-direction: column;
-}
-
-.left-side__title{
-    font-family: Roboto;
-    font-size: 50px;
+.main-about__title{
+    font-size: 40px;
     font-weight: 400;
     margin: 0px 0px 20px 0px;
+}
+
+.main-about__text{
+    opacity: 50%;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+/* ----Main-Body------------------------------------------------ */
+
+.main-body{
+    background: linear-gradient(180deg, #0C0C0C 0%, rgba(12, 12, 12, 0) 100%);
+    width: 100%;
+    height: auto;
+}
+
+/* ----Main-Skills---------------------------------------------- */
+
+.main-skills__container{
+    padding: 0px 21px;
+}
+
+.main-skills__content{
+    padding: 78px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.main-skills__title{
+}
+
+.underline{
+    width: 50px;
+    height: 3px;
+    background-color: red;
+    margin: 0px 0px 65px 0px;
+}
+
+.main-skills__skills-list{
+    width: auto;
+    height: auto;
+}
+
+.skills-list__row{
+    display: flex;
+}
+
+.skills-list__row:not(:last-child){
+    margin: 0px 0px 20px 0px;
+}
+
+.skills-item{
+    flex: 0 1 auto;
+    width: 230px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-item:not(:last-child){
+    margin: 0px 40px 0px 0px;
+}
+
+.skill__logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0px 0px 22px;
+}
+
+.skill__name{
+    margin: 0px 0px 20px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skill__text{
+    font-family: Lora;
+    font-weight: 500;
+    color: #AFB2C0;
+    text-align: center;
+    padding: 0px 10px;
+}
+
+.title_white{
+    color: #fff;
+}
+
+/* ----Skills-Color--------------------------------------------- */
+
+.skill_1{
+    background: linear-gradient(132.84deg, #00F0FF 21.19%, rgba(0, 240, 255, 0) 106.67%);
+}
+
+.skill_2{
+    background: linear-gradient(132.84deg, #FF0000 21.19%, rgba(255, 0, 0, 0) 106.67%);
+}
+
+.skill_3{
+    background: linear-gradient(132.84deg, #7000FF 21.19%, rgba(112, 0, 255, 0) 106.67%);
+}
+
+/* ----Main-Works----------------------------------------------- */
+
+.main-works__container{
+    padding: 0px 21px;
+}
+
+.main-works__content{
+    padding: 156px 0px 78px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.works-item:not(:last-child){
+    margin: 0px 0px 78px 0px;
+}
+
+.item-background{
+    width: 770px;
+    height: 385px;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+}
+
+.item-part{
+    flex: 0 1 50%;
+}
+
+.item-right__work{
+    border-radius: 0px 30px 30px 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.item-left__work{
+    border-radius: 30px 0px 0px 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.item__about{
+    border-radius: 30px 0px 0px 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0px 0px 0px;
+}
+
+.item__work{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item__work__body{
+    width: 200px;
+    height: 200px;
+}
+
+.item-title{
+    margin: 0px 0px 148px 0px;
+}
+
+.item-button{
+    width: 180px;
+    height: 51px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-button__text{
+    color: #fff;
+}
+
+/* ----Items-Color---------------------------------------- */
+
+.item__color_1{
+    background: linear-gradient(96.92deg, #FF0000 27.46%, rgba(217, 217, 217, 0) 156.15%);
+}
+
+.item__color_2{
+    background: linear-gradient(132.84deg, #00F0FF 21.19%, rgba(0, 240, 255, 0) 106.67%);
+}
+
+/* ----Footer--------------------------------------------- */
+
+.footer-background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.footer{
+    position: relative;
+    color: inherit;
+}
+
+.footer__content{
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 78px 0px;
+}
+
+.footer__title{
+    font-weight: 500;
+    font-size: 40px;
+    margin: 0px 0px 38px 0px;
+}
+
+.contacts__list{
+    display: flex;
+}
+
+.contacts__list__item{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts__list__item:not(:last-child){
+    margin: 0px 20px 0px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----1-Work--------------------------------------------- */
+
+/* ----2-Work--------------------------------------------- */
+
+.item__work_2 img{
+    height: 100%;
+    width: 100%;
 }
