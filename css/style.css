@@ -97,7 +97,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .header__container {
@@ -141,10 +141,16 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
     opacity: 1;
 }
 
+.menu__link:hover{
+    opacity: 1;
+    text-shadow: 0 0 4px #FFFFFF;
+}
+
 /* ----Main-About---------------------------------------------- */
 
 .main-about{
     position: relative;
+    height: auto;
 }
 
 .main-about__container{
@@ -160,8 +166,8 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 }
 
 .main-about__content{
-    padding: 166px 0px 122px 0px;
-    max-height: 575px;
+    padding: 200px 0px 122px 0px;
+    height: auto;
     position: relative;
     z-index: 2;
     display:flex;
@@ -189,7 +195,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 /* ----Main-Body------------------------------------------------ */
 
 .main-body{
-    background: linear-gradient(180deg, #0C0C0C 0%, rgba(12, 12, 12, 0) 100%);
+    background: linear-gradient(180deg, #0C0C0C 0%, rgba(12, 12, 12, 0.631875) 16.15%, rgba(12, 12, 12, 0.24) 33.33%, rgba(12, 12, 12, 0.235) 50%, rgba(12, 12, 12, 0.23) 66.67%, rgba(12, 12, 12, 0.590937) 82.29%, #0C0C0C 100%);
     width: 100%;
     height: auto;
 }
@@ -249,6 +255,14 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
     height: 70px;
     border-radius: 50%;
     margin: 0px 0px 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill__logo img{
+    width: 40px;
+    height: 40px;
 }
 
 .skill__name{
@@ -361,6 +375,9 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 
 .item-button__text{
     color: #fff;
+    font-size: 12px;
+    font-family: Montserrat;
+    font-weight: 700;
 }
 
 /* ----Items-Color---------------------------------------- */
@@ -394,13 +411,13 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 78px 0px;
+    padding: 35px 0px;
 }
 
 .footer__title{
     font-weight: 500;
     font-size: 40px;
-    margin: 0px 0px 38px 0px;
+    margin: 0px 0px 25px 0px;
 }
 
 .contacts__list{
