@@ -131,20 +131,12 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 }
 
 @media (max-width: 460px) {
-    .title{
-        font-size: 36px;
-        margin: 0px 0px 14px;
-    }
     .underline{
         width: 36px;
     }
 }
 
 @media (max-width: 414px) {
-    .title{
-        font-size: 32px;
-        margin: 0px 0px 14px;
-    }
     .underline{
         width: 34px;
     }
@@ -152,7 +144,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 
 @media (max-width: 392px) {
     .title{
-        font-size: 29px;
         margin: 0px 0px 12px;
     }
     .underline{
@@ -479,6 +470,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
     flex: 0 1 auto;
     width: 230px;
     min-height: 200px;
+    max-height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -542,6 +534,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 @media (max-width: 800px) {
     .skills-item{
         width: 205px;
+        border-radius: 15%;
     }
     .skills-item:not(:last-child){
         margin: 0px 25px 0px 0px;
@@ -550,12 +543,13 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 
 @media (max-width: 730px) {
     .skills-item{
-        width: 100px;
+        width: 140px;
+        border-radius: 10%;
     }
     .skills-item:not(:last-child){
         margin: 0px 60px 0px 0px;
     }
-    .skill__text{
+    .skill-item__text{
         visibility: hidden;
         height: 0;
     }
@@ -577,20 +571,17 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
     }
     .skills-item{
         width: 180px;
+        border-radius: 10%;
+        min-height: 190px;
     }
     .skill__name{
         margin: 0px 0px 20px;
         font-weight: 500;
         font-size: 18px;
     }
-    .skill__text{
+    .skill-item__text{
         visibility: visible;
         height: auto;
-        font-family: Montserrat;
-        font-weight: 500;
-        color: #AFB2C0;
-        text-align: center;
-        padding: 0px 10px;
     }
     .skills-item:not(:last-child){
         margin: 0px;
@@ -614,11 +605,11 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 /* ----Main-Works----------------------------------------------- */
 
 .main-works__container{
-    padding: 0px 21px;
+    /* padding: 0px 21px; */
 }
 
 .main-works__content{
-    padding: 78px 30px;
+    padding: 78px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -635,7 +626,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
     width: 100%;
     align-items: center;
     justify-content: center;
-    padding: 0px 155px;
+    padding: 0px 35px;
 }
 
 .works-item{
@@ -644,7 +635,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 
 .item-background{
     width: 100%;
-    height: 385px;
+    height: 450px;
     border-radius: 30px;
     background-color: white;
     display: flex;
@@ -655,8 +646,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 
 .item-part{
     flex: 0 1 50%;
-    width: 100%;
-    height: 100%;
 }
 
 .item-right__work{
@@ -677,8 +666,8 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
     height: 100%;
     display: flex;
     flex-direction: column;
-    max-height: 385px;
-    padding: 80px 20px 50px 70px;
+    max-height: 450px;
+    padding: 100px 20px 80px 80px;
 }
 
 .item__work{
@@ -697,7 +686,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 }
 
 .item-button{
-    width: 180px;
+    width: 210px;
     height: 51px;
     border-radius: 30px;
     display: flex;
@@ -714,15 +703,58 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 
 .work_title{
     font-size: 40px;
-    width: 300px;
+    width: auto;
     line-height: 50px;
-    margin: 0px 0px 20px;
+    font-weight: 700;
+    margin: 0px 0px 30px;
 }
 
 .item__work_skills{
     text-align: left;
     padding: 0;
     flex: 0 1 100%;
+}
+
+/* ----Main-Works-Adaptability--------------------------------- */
+
+@media (max-width: 810px) {
+    .item-background{
+        flex-direction: column;
+        height: auto;
+        border-radius: 20px;
+    }
+    .item-right__work{
+        border-radius: 0px 0px 20px 20px;
+    }
+    .item-left__work{
+        border-radius: 20px 20px 0px 0px;
+    }
+    .item__about{
+        align-items: center;
+        padding: 36px;
+        height: auto;
+    }
+    .item__work{
+        padding: 40px;
+    }
+    .item__work_skills{
+        margin: 0px 0px 40px;
+    }
+    .works-item:not(:last-child){
+        margin: 0px 0px 78px 0px;
+    }
+    .item-part{
+        text-align: center;
+    }
+    .item__work_skills{
+        text-align: center;
+    }
+    .main-works__works-list{
+        padding: 0px 35px;
+    }
+    .item-button{
+        width: 230px;
+    }
 }
 
 /* ----Items-Color---------------------------------------- */
@@ -756,7 +788,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 35px 0px;
+    padding: 35px 35px;
     font-family: Fairplay Display;
 }
 
@@ -784,7 +816,61 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
     margin: 0px 20px 0px 0px;
 }
 
+/* ----Footer-Adaptability----------------------------------- */
 
+@media (max-width: 570px) {
+    .footer__title{
+        font-size: 35px;
+        text-align: center;
+    }
+    .footer__content{
+        padding: 35px 100px;
+    }
+    .contacts__list__item{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer__content{
+        padding: 35px 80px;
+    }
+}
+
+@media (max-width: 460px) {
+    .footer__content{
+        padding: 35px 70px;
+    }
+}
+
+@media (max-width: 440px) {
+    .footer__content{
+        padding: 35px 50px;
+    }
+}
+
+@media (max-width: 440px) {
+    .footer__title{
+        font-size: 32px;
+        text-align: center;
+    }
+    .footer__content{
+        padding: 35px 50px;
+    }
+}
+
+@media (max-width: 380px) {
+    .footer__content{
+        padding: 35px 30px;
+    }
+}
+
+@media (max-width: 334px) {
+    .footer__content{
+        padding: 35px 20px;
+    }
+}
 
 
 
