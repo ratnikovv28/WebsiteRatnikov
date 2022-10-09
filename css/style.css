@@ -324,7 +324,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
         font-size: 22.5px; 
     }
     .main-about__content{
-        padding: 280px 0px 202px 0px;
+        padding: 300px 0px 222px 0px;
     }
 }
 
@@ -337,94 +337,112 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
         font-size: 19px; 
     }
     .main-about__content{
-        padding: 240px 0px 162px 0px;
+        padding: 280px 0px 202px 0px;
     }
 }
 
 @media (max-width: 794px) {
     .main-about__title{
-        font-size: 48px;
+        font-size: 55px;
         margin: 0px 0px 16px 0px;
     }
     .main-about__text{
         font-size: 16px; 
     }
     .main-about__content{
-        padding: 220px 0px 142px 0px;
+        padding: 260px 0px 182px 0px;
+    }
+}
+
+@media (max-width: 696px) {
+    .main-about__title{
+        font-size: 50px;
+        margin: 0px 0px 16px 0px;
+    }
+    .main-about__content{
+        padding: 250px 0px 172px 0px;
+    }
+    .main-about__part{
+        padding: 0px 45px;
     }
 }
 
 @media (max-width: 628px) {
     .main-about__title{
-        font-size: 38px;
+        font-size: 42px;
         margin: 0px 0px 14px 0px;
     }
-    .main-about__text{
-        font-size: 16px; 
-    }
     .main-about__content{
-        padding: 210px 0px 132px 0px;
+        padding: 235px 0px 157px 0px;
+    }
+    .main-about__part{
+        padding: 0px 40px;
     }
 }
 
 @media (max-width: 532px) {
     .main-about__title{
-        font-size: 34px;
+        font-size: 36px;
         margin: 0px 0px 12px 0px;
     }
     .main-about__text{
         font-size: 14px; 
     }
     .main-about__content{
-        padding: 200px 0px 122px 0px;
+        padding: 230px 0px 152px 0px;
     }
     .main-about__part{
-        padding: 0 40px;
+        padding: 0 31px;
     }
 }
 
 @media (max-width: 454px) {
     .main-about__title{
-        font-size: 30px;
-        margin: 0px 0px 12px 0px;
-    }
-    .main-about__text{
-        font-size: 14px; 
+        font-size: 33px;
     }
     .main-about__content{
-        padding: 195px 0px 117px 0px;
+        padding: 225px 0px 147px 0px;
     }
     .main-about__part{
-        padding: 0 29px;
+        padding: 0 25px;
     }
 }
 
-@media (max-width: 392px) {
+@media (max-width: 412px) {
     .main-about__title{
-        font-size: 28px;
-        margin: 0px 0px 12px 0px;
-    }
-    .main-about__text{
-        font-size: 13px; 
-    }
-    .main-about__content{
-        padding: 190px 0px 112px 0px;
+        font-size: 31px;
     }
     .main-about__part{
         padding: 0 23px;
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 392px) {
     .main-about__title{
-        font-size: 23px;
+        font-size: 30px;
+        margin: 0px 0px 12px 0px;
+    }
+    .main-about__text{
+        font-size: 13px; 
+    }
+    .main-about__content{
+        padding: 220px 0px 142px 0px;
+    }
+    .main-about__part{
+        padding: 0 18px;
+    }
+}
+
+@media (max-width: 370px) {
+    .main-about__title{
+        font-size: 26px;
         margin: 0px 0px 10px 0px;
     }
     .main-about__text{
         font-size: 11px; 
     }
     .main-about__part{
-        padding: 0 17px;
+        padding: 0 14px;
     }
 }
 
