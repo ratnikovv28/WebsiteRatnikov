@@ -180,17 +180,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
     font-size: 14px;
     color: inherit;
     font-weight: 400;
-    opacity: 50%;
     text-transform: uppercase;
-}
-
-.menu__link_active{
-    opacity: 1;
-}
-
-.menu__link:hover{
-    opacity: 1;
-    text-shadow: 0 0 4px #FFFFFF;
 }
 
 /* ----Main-About---------------------------------------------- */
@@ -325,8 +315,8 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 }
 
 .skill__logo img{
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
 }
 
 .skill__name{
@@ -386,7 +376,8 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 
 .item-background{
     width: 100%;
-    height: 450px;
+    min-height: 450px;
+    height: auto;
     border-radius: 30px;
     background-color: white;
     display: flex;
@@ -417,7 +408,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
     height: 100%;
     display: flex;
     flex-direction: column;
-    max-height: 450px;
     padding: 100px 20px 80px 80px;
 }
 
@@ -624,13 +614,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 @media (max-width: 360px) {
     .menu__item:not(:last-child) {
         margin: 0px 15px 0px 0px;
-    }
-}
-
-@media(hover: hover){
-    .menu__link:hover{
-        opacity: 1;
-        text-shadow: 0 0 4px #FFFFFF;
     }
 }
 
