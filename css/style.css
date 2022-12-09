@@ -459,6 +459,10 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
     background: linear-gradient(123.81deg, #2FD5B6 33.92%, rgba(37, 166, 26, 0.53) 97.82%);
 }
 
+.item__color_3{
+    background: linear-gradient(126.35deg, #FF3D00 27.57%, rgba(255, 61, 0, 0.65) 96.99%);
+}
+
 /* ----Footer--------------------------------------------- */
 
 .footer-background{
