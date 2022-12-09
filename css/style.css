@@ -521,6 +521,32 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 
 /* ----ADAPTABILITY---------------------------------------------------------------------------------- */
 
+/* ----Logo-Adaptability------------------------------- */
+
+@media (max-width: 720px) {
+    .logo{
+        width: 80px;
+        height: 80px;
+    }
+    
+    .logo__border{
+        width: 80px;
+        height: 23px;
+    }
+    
+    .logo__text{
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: 0.036em;
+    }
+    
+    .logo__text::after{
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: 0.08em;
+    }
+}
+
 /* ----General-Adaptability---------------------------------- */
 
 @media (max-width: 870px) {
